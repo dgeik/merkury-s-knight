@@ -1,0 +1,23 @@
+{
+	"Leather armor":{
+		"def":0.2
+	},
+	"Chain armor":{
+		"def":0.3
+	},
+	"Plate armor":{
+		"def":0.4
+	},
+	"Sword":{
+		"dmg":1
+	},
+	"Long sword":{
+		"dmg":1
+	},
+	"Eastern sword":{
+		"dmg":1
+	},
+	"Lourdfardeau":{
+		"dmg":1
+	}
+}

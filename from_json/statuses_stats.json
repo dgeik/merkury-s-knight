@@ -1,0 +1,24 @@
+{
+	"Bleed":{
+		"stat":1,
+		"hp":1
+	},
+	"Weak":{
+		"stat":1
+	},
+	"Tin":{
+		"stat":1
+	},
+	"Copper":{
+		"stat":0.1
+	},
+	"Mercury":{
+		"stat":1
+	},
+	"Vampirism":{
+		"stat":1
+	},
+	"Counterattack":{
+		"stat":1
+	}
+}
