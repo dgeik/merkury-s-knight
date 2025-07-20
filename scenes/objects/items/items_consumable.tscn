@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://vlrxn8han4ng"]
+
+[ext_resource type="PackedScene" uid="uid://cflbbm4fiu4dp" path="res://scenes/objects/items/items.tscn" id="1_8hvo8"]
+[ext_resource type="Script" path="res://scenes/objects/items/items_consumable.gd" id="2_2gin6"]
+
+[node name="items_consumable" instance=ExtResource("1_8hvo8")]
+script = ExtResource("2_2gin6")
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(-0.374998, -0.108333)

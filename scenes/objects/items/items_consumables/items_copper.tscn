@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg1n10sbkddtn"]
+
+[ext_resource type="PackedScene" uid="uid://vlrxn8han4ng" path="res://scenes/objects/items/items_consumable.tscn" id="1_44y4u"]
+[ext_resource type="Script" path="res://scenes/objects/items/items_consumables/items_copper.gd" id="2_vychm"]
+
+[node name="items_consumable" instance=ExtResource("1_44y4u")]
+script = ExtResource("2_vychm")

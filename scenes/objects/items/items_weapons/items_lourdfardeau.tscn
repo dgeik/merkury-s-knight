@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://cam4jc2dair6g"]
+
+[ext_resource type="PackedScene" uid="uid://d22b72xt7oafn" path="res://scenes/objects/items/items_weapon.tscn" id="1_rko7g"]
+[ext_resource type="Script" path="res://scenes/objects/items/items_weapons/items_lourdfardeau.gd" id="2_dtrpt"]
+
+[node name="items_weapon" instance=ExtResource("1_rko7g")]
+script = ExtResource("2_dtrpt")

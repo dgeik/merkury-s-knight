@@ -1,0 +1,83 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv6ru2ig0xp2l"]
+
+[ext_resource type="Script" path="res://scenes/objects/inventory/choose_stone.gd" id="1_x5pui"]
+[ext_resource type="StyleBox" uid="uid://br5b6myxh3usi" path="res://styles/black.tres" id="2_a6kik"]
+[ext_resource type="StyleBox" uid="uid://sjot4rnenycb" path="res://styles/battle_action_button.tres" id="3_8djub"]
+
+[node name="ChooseStone" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2864.0
+offset_top = 3496.0
+offset_right = 2864.0
+offset_bottom = 3496.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+script = ExtResource("1_x5pui")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1096.0
+offset_top = -374.0
+offset_right = 1096.0
+offset_bottom = 802.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Separator" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Stone_tin" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = ExtResource("2_a6kik")
+theme_override_styles/hover = ExtResource("2_a6kik")
+theme_override_styles/pressed = ExtResource("2_a6kik")
+theme_override_styles/focus = ExtResource("3_8djub")
+text = "stone_Tin"
+
+[node name="Stone_copper" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = ExtResource("2_a6kik")
+theme_override_styles/hover = ExtResource("2_a6kik")
+theme_override_styles/pressed = ExtResource("2_a6kik")
+theme_override_styles/focus = ExtResource("3_8djub")
+text = "stone_Copper"
+
+[node name="Stone_mercury" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = ExtResource("2_a6kik")
+theme_override_styles/hover = ExtResource("2_a6kik")
+theme_override_styles/pressed = ExtResource("2_a6kik")
+theme_override_styles/focus = ExtResource("3_8djub")
+text = "stone_Mercury"
+
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = ExtResource("2_a6kik")
+theme_override_styles/hover = ExtResource("2_a6kik")
+theme_override_styles/pressed = ExtResource("2_a6kik")
+theme_override_styles/focus = ExtResource("3_8djub")
+text = "BUTTON_BACK"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Stone_tin" to="." method="_on_stone_tin_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Stone_copper" to="." method="_on_stone_copper_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Stone_mercury" to="." method="_on_stone_mercury_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_button_pressed"]

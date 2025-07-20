@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://lwm1wmnyh5jn"]
+
+[ext_resource type="Script" path="res://scenes/objects/enemies/enemy.gd" id="1_71e6o"]
+[ext_resource type="Texture2D" uid="uid://bndiksqgued7n" path="res://Без имени-1.png" id="2_5w4jv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h4ho2"]
+radius = 1129.39
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_duqbl"]
+radius = 2592.05
+
+[node name="Enemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 8
+script = ExtResource("1_71e6o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1, 2)
+texture = ExtResource("2_5w4jv")
+
+[node name="InBattle" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InBattle"]
+shape = SubResource("CircleShape2D_h4ho2")
+
+[node name="Harase" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Harase"]
+shape = SubResource("CircleShape2D_duqbl")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[connection signal="body_entered" from="InBattle" to="." method="_on_InBattle_body_entered"]
+[connection signal="body_entered" from="Harase" to="." method="_on_harase_body_entered"]

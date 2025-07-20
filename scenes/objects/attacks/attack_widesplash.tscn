@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0g0v1gygse67"]
+
+[ext_resource type="Texture2D" uid="uid://dhyn72is57e2p" path="res://scenes/objects/attacks/attack_splash.png" id="1_w7ghr"]
+[ext_resource type="Script" path="res://scenes/objects/attacks/attack_widesplash.gd" id="1_yrfu7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rwxoo"]
+size = Vector2(1536, 4)
+
+[node name="AttackWidesplash" type="Area2D"]
+collision_layer = 16
+collision_mask = 8
+script = ExtResource("1_yrfu7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.52588e-05, -24)
+scale = Vector2(75, 12.891)
+texture = ExtResource("1_w7ghr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.765, 0.765)
+shape = SubResource("RectangleShape2D_rwxoo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

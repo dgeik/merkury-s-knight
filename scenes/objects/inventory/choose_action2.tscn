@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://7bhh5qr11of8"]
+
+[ext_resource type="StyleBox" uid="uid://br5b6myxh3usi" path="res://styles/black.tres" id="1_tr3ev"]
+[ext_resource type="StyleBox" uid="uid://sjot4rnenycb" path="res://styles/battle_action_button.tres" id="2_p3dm7"]
+
+[node name="ChooseAction2" type="CanvasLayer"]
+scale = Vector2(0.14, 0.14)
+transform = Transform2D(0.14, 0, 0, 0.14, 0, 0)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1371.0
+offset_top = 1086.0
+offset_right = 2937.0
+offset_bottom = 2374.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+z_index = 1
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Separator" type="Control" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Start" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = ExtResource("1_tr3ev")
+theme_override_styles/hover = ExtResource("1_tr3ev")
+theme_override_styles/pressed = ExtResource("1_tr3ev")
+theme_override_styles/focus = ExtResource("2_p3dm7")
+text = "BUTTON_CHOOSE_BATTLE"
+
+[node name="Stone" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = ExtResource("1_tr3ev")
+theme_override_styles/hover = ExtResource("1_tr3ev")
+theme_override_styles/pressed = ExtResource("1_tr3ev")
+theme_override_styles/focus = ExtResource("2_p3dm7")
+text = "BUTTON_CHOOSE_STONE"
+
+[node name="Item" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = ExtResource("1_tr3ev")
+theme_override_styles/hover = ExtResource("1_tr3ev")
+theme_override_styles/pressed = ExtResource("1_tr3ev")
+theme_override_styles/focus = ExtResource("2_p3dm7")
+text = "BUTTON_CHOOSE_ITEM"
+
+[node name="Leave" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = ExtResource("1_tr3ev")
+theme_override_styles/hover = ExtResource("1_tr3ev")
+theme_override_styles/pressed = ExtResource("1_tr3ev")
+theme_override_styles/focus = ExtResource("2_p3dm7")
+text = "BUTTON_CHOOSE_LEAVE"

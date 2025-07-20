@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0hy84lc2mf8a"]
+
+[ext_resource type="PackedScene" uid="uid://byp5jv0k5q04v" path="res://scenes/player/Player.tscn" id="1_p3yci"]
+[ext_resource type="PackedScene" uid="uid://cknjplgw7nevs" path="res://scenes/objects/interactable/door.tscn" id="2_i5qxx"]
+
+[node name="f0_wine" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_p3yci")]
+
+[node name="Door" parent="." instance=ExtResource("2_i5qxx")]
+position = Vector2(-8, -120)
+to_scene = "f0_lab"
+to_position_y = 520
+to_position_x = -100
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -440.0
+offset_top = -80.0
+offset_right = 440.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 90
+text = "wine"

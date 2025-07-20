@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr5db6crwo73k"]
+
+[ext_resource type="Script" path="res://scenes/objects/enemies/enemy_maid.gd" id="1_63818"]
+[ext_resource type="Texture2D" uid="uid://bndiksqgued7n" path="res://Без имени-1.png" id="2_au2jp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jbica"]
+
+[node name="EnemyMaid" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 8
+script = ExtResource("1_63818")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(62.305, 62.305)
+shape = SubResource("CircleShape2D_jbica")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 1)
+skew = -0.279253
+texture = ExtResource("2_au2jp")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
